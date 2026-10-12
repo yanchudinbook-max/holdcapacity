@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HOLD — a check-engine light for human capacity</title>
+<meta name="description" content="HOLD learns your baseline from the phone you already carry and shows the warning light early, when your capacity starts to drop. Passive. No wearable. Pre-registered validation.">
+<meta name="theme-color" content="#EFEEE8">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://holdcapacity.com">
+<meta property="og:title" content="HOLD — a check-engine light for human capacity">
+<meta property="og:description" content="HOLD learns your baseline from the phone you already carry and shows the warning light early, when your capacity starts to drop. Passive. No wearable.">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Ian: add og:image once hosted — a 1200×630 PNG at https://holdcapacity.com/og.png, then uncomment: -->
+<!-- <meta property="og:image" content="https://holdcapacity.com/og.png"> -->
+<style>
+  :root{
+    --bg:#EFEEE8; --panel:#F6F5F0; --dark:#1F1F1F; --body:#3C3C3C;
+    --sage:#2E4A3E; --ochre:#C4761F; --slate:#5A6B7D; --grey:#6F7C89; --border:#D9DFE5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:var(--bg);color:var(--body);overflow-x:hidden;
+    font-family:"Arial","Helvetica Neue",Helvetica,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;}
+  a{color:inherit;}
+  .wrap{min-height:100vh;display:flex;flex-direction:column;max-width:960px;margin:0 auto;padding:28px 28px 20px;}
+  /* header */
+  header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .logo{font-weight:800;font-size:16px;letter-spacing:1px;color:var(--dark);}
+  .logo .d{color:var(--ochre);}
+  .status{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);}
+  /* hero */
+  main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 0;}
+  h1{font-size:clamp(31px,5.6vw,54px);line-height:1.07;font-weight:800;letter-spacing:-.6px;color:var(--dark);max-width:16ch;}
+  .sub{margin-top:18px;font-size:clamp(14px,1.9vw,18px);color:var(--slate);max-width:52ch;line-height:1.5;}
+  .tags{margin-top:18px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);}
+  .tags2{margin-top:7px;}
+  .tags b{color:var(--ochre);font-weight:700;}
+  .rule{height:1px;background:var(--border);margin:30px 0;}
+  /* labels */
+  .lab{font-size:10.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--sage);margin-bottom:8px;}
+  .lab .n{color:var(--grey);margin-right:7px;}
+  /* what + domains */
+  .what{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;}
+  .what p{font-size:14.5px;color:var(--body);max-width:46ch;}
+  .what p b{color:var(--dark);}
+  .domains{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:4px;}
+  .chip{font-size:12.5px;font-weight:700;color:var(--dark);background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:4px 11px;}
+  .honest{margin-top:13px;font-size:12.5px;color:var(--grey);}
+  /* team */
+  .team .lab{color:var(--ochre);}
+  .people{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:2px;}
+  .nm{font-weight:800;color:var(--dark);font-size:17px;}
+  .ro{font-size:12.5px;color:var(--slate);margin:2px 0 9px;}
+  .bio{font-size:13.5px;color:var(--body);max-width:44ch;}
+  .cred{margin-top:9px;font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--grey);}
+  .person a{display:inline-block;margin-top:11px;font-size:12px;color:var(--sage);text-decoration:none;border-bottom:1px solid var(--border);}
+  .person a:hover{border-color:var(--sage);}
+  /* cta */
+  .cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+  .btn{display:inline-block;background:var(--sage);color:#F4F3EE;text-decoration:none;font-weight:700;
+    font-size:14px;letter-spacing:.3px;padding:11px 22px;border-radius:999px;}
+  .btn:hover{background:#26402f;}
+  .ctanote{font-size:12.5px;color:var(--grey);}
+  /* footer */
+  footer{margin-top:22px;padding-top:13px;border-top:1px solid var(--border);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:10.5px;color:#9AA6B0;}
+  footer a{color:#9AA6B0;text-decoration:none;}
+  @media (max-width:720px){
+    .what,.people{grid-template-columns:1fr;gap:20px;}
+    main{padding:26px 0;}
+    .rule{margin:22px 0;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">H<span class="d">.</span> HOLD</div>
+    <div class="status">Pre-seed · London &amp; Dubai</div>
+  </header>
+
+  <main>
+    <h1>A check-engine light for human capacity.</h1>
+    <p class="sub">HOLD learns your baseline from the phone you already carry, and shows the warning light early: when your capacity starts to drop, while there is still time to act.</p>
+    <p class="tags"><b>Passive</b> &nbsp;·&nbsp; <b>No wearable</b></p>
+    <p class="tags tags2"><b>Pre-registered validation</b></p>
+
+    <div class="rule"></div>
+
+    <div class="what">
+      <div>
+        <div class="lab"><span class="n">01</span>What HOLD measures</div>
+        <p>Wearables measure the body, heart, sleep and strain. HOLD measures whether you are still <b>functioning</b>: whether your ability to show up for your life is changing over weeks, against <b>your own baseline</b>, not a population.</p>
+      </div>
+      <div>
+        <div class="lab">Four behavioural domains</div>
+        <div class="domains">
+          <span class="chip">Momentum</span>
+          <span class="chip">Rhythm</span>
+          <span class="chip">Restoration</span>
+          <span class="chip">Orbit</span>
+        </div>
+        <p class="honest">A measure of function, not a diagnosis. We test it properly and show the results before we make any claims.</p>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="team">
+      <div class="lab"><span class="n">02</span>Team</div>
+      <div class="people">
+        <div class="person">
+          <div class="nm">Tatiana Serykh</div>
+          <div class="ro">Founder &amp; CEO</div>
+          <p class="bio">Twenty years turning complex industrial systems into software that predicts failure, from oil, gas and heavy industry to modular construction. Now applying the same systems thinking to human capacity: seeing overload before the breakdown is visible.</p>
+          <div class="cred">ex-Accenture · Mighty Buildings (Y Combinator) · UK Global Talent</div>
+          <a href="https://www.linkedin.com/in/tatiana-serykh-57780633" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+        <div class="person">
+          <div class="nm">Ian Chudin</div>
+          <div class="ro">Co-founder &amp; CTO</div>
+          <p class="bio">PhD applied mathematician. Fifteen-plus years building AI and predictive models for complex industrial systems, turning noisy real-world signals into decisions you can act on.</p>
+          <div class="cred">AI &amp; applied mathematics</div>
+          <a href="https://www.linkedin.com/in/yanchudin" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="cta">
+      <a class="btn" href="mailto:hello@holdcapacity.com?subject=HOLD%20—%20demo%20request">Request demo</a>
+      <span class="ctanote">Open to practitioners, pilots and partners · validation underway in 2026.</span>
+    </div>
+  </main>
+
+  <footer>
+    <span>© 2026 HOLD · <a href="mailto:hello@holdcapacity.com">hello@holdcapacity.com</a></span>
+    <span>HOLD is not a medical device; it does not diagnose, treat or prevent any condition.</span>
+  </footer>
+
+</div>
+</body>
+</html>
